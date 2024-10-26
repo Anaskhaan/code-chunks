@@ -1,20 +1,19 @@
 // Find the largest number without built-in function like Math.max();
 
 function findLargestNumber(arr) {
-  if (arr.length === 0) return null; // Handle empty array case
+  if (arr.length === 0) return null; //handle empty array
 
-  let max = arr[0]; // Initialize max with the first element of the array
+  let max = arr[0];
 
   for (let i = 1; i < arr.length; i++) {
-    // Corrected for loop syntax
+    // Check array values
     if (arr[i] > max) {
-      // Corrected if syntax
-      max = arr[i]; // Update max if the current element is larger
+      //validate smaller or larger values
+      max = arr[i]; //assign largest value to max
     }
   }
-
-  return max; // Return the largest number
+  return max;
 }
 
-const numbers = [3, 5, 7, 11, 30];
-console.log(findLargestNumber(numbers)); // Output: 30
+const numbers = [3, 5, 7, 11, 30, 55];
+console.log(findLargestNumber(numbers));
